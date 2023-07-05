@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CompanyController;
+use Resources\views;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,3 +30,9 @@ Route::get('/about', function () {
 Route::resource('companies', CompanyController::class);
 
 Route::post('/user', [UserController::class, 'index']);
+
+Route::get('/demo/{name}', function ($name) {
+    echo $name;
+    #return view('demo');
+});
+ 
