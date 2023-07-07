@@ -24,7 +24,7 @@ Route::get('/about', function () {
     echo "lorem ";
     #return view('welcome');
 });
- 
+
 #Route::get('/user', [UserController::class, 'index']);
 
 Route::resource('companies', CompanyController::class);
@@ -35,4 +35,17 @@ Route::get('/demo/{name}', function ($name) {
     echo $name;
     #return view('demo');
 });
- 
+
+Route::get('/demo', function () {
+    #echo "HELLO JII";
+    return view('demo');
+});
+
+/* Route::put('users/{id}', function ($id) {
+});
+
+Route::patch();
+
+Route::delete('users/{id}', function ($id) {
+});
+ */

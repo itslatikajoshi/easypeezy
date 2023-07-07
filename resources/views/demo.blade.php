@@ -1,3 +1,1 @@
-<h1>
-    $name;
-</h1>
+<h1> Sab ke sab pagal h </h1>
