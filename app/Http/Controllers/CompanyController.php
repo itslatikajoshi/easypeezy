@@ -13,7 +13,9 @@ class CompanyController extends Controller
     */
     public function index()
     {
-        $companies = Company::orderBy('id','asc')->paginate(5);
+        
+        $companies = Company::all();
+       
         return view('companies.index', compact('companies'));
     }
 
@@ -39,6 +41,7 @@ class CompanyController extends Controller
             'name' => 'required',
             'email' => 'required',
             'address' => 'required',
+            'mobile'=> 'required'
         ]);
         
         Company::create($request->post());
@@ -81,6 +84,7 @@ class CompanyController extends Controller
             'name' => 'required',
             'email' => 'required',
             'address' => 'required',
+            'mobile'=>'required'
         ]);
         
         $company->fill($request->post())->save();

@@ -45,11 +45,21 @@
                         @enderror
                     </div>
                 </div>
+                
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>Company Address:</strong>
                         <input type="text" name="address" class="form-control" placeholder="Company Address">
                         @error('address')
+                        <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                        @enderror
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="form-group">
+                        <strong>Company Mobile:</strong>
+                        <input type="mobile" name="mobile" class="form-control" placeholder="Company Mobile">
+                        @error('mobile')
                         <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                         @enderror
                     </div>

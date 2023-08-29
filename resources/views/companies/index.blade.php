@@ -29,17 +29,19 @@
                     <th>Company Name</th>
                     <th>Company Email</th>
                     <th>Company Address</th>
+                    <th>Company Mobile</th>
                     <th width="280px">Action</th>
                 </tr>
             </thead>
             <tbody>
-               
+             
                 @foreach ($companies as $key => $company)
                     <tr>
                         <td>{{ $key+1  }}</td>
                         <td>{{ $company->name }}</td>
                         <td>{{ $company->email }}</td>
                         <td>{{ $company->address }}</td>
+                        <td>{{ $company->mobile }}</td>
                         <td>
                             <form action="{{ route('companies.destroy',$company->id) }}" method="Post">
                                 <a class="btn btn-primary" href="{{ route('companies.edit',$company->id) }}">Edit</a>
@@ -52,7 +54,26 @@
                     @endforeach
             </tbody>
         </table>
-        {!! $companies->links() !!}
+        <?php
+        $names= array('Latika','Gaurav','Sushma','Nandi');?>
+        <ol>
+            <?php
+            
+            foreach($names as $key)
+            {
+               echo "<li>". $key."</li>" ;
+
+            }?>
+            
+           
+        </ol>
+      <?php  $names1= array('Latika','Gaurav','Sushma','Nandi')?>
+        <ol>
+            @foreach($names1 as $key)
+            <li>{{$key}}</li>
+            @endforeach
+        </ol>
+
     </div>
 </body>
 </html>
